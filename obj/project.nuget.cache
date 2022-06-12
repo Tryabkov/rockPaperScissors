@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XdN1dyaxly9LbiRPEzTTYw9VmBAe1P6IBbIQjmI5TA1KGfzaZAeEjiP6vema00qdeF2zfqeQaMTZGx8mT9cO6A==",
+  "dgSpecHash": "z8f+yaSOZ5eMrdWkml6cgIeA6pdTj6Hp1DRSV1DSM1HloM17VKsy4P2X9gBMX6M1H4dQ7zoxv/c6WTfoxcN8TA==",
   "success": true,
-  "projectFilePath": "A:\\VS_Projects\\rockPaperScissors\\rockPaperScissors.csproj",
+  "projectFilePath": "D:\\C# Projects\\rockPaperScissors\\rockPaperScissors.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

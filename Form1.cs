@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -7,6 +6,9 @@ namespace RockPaperScissors
 {
     public partial class Form1 : Form
     {
+        const string USERWIN = "You WIN!!!";
+        const string PROGRAMWIN = "Enemy win";
+        const string NOBODYWIN = "Nobody win";
         Random random = new();
         Dictionary<int, int> winMoves = new Dictionary<int, int>{
                 {1, 3},
@@ -23,32 +25,21 @@ namespace RockPaperScissors
             //1 - rock
             //2 - paper
             //3 - scissors
-
-
-
             InitializeComponent();
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void RockButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void BRock_Click(object sender, EventArgs e)
-        {
-            ClearAll();
             Сounting(1);
         }
 
-        private void BPaper_Click(object sender, EventArgs e)
-        {
-            ClearAll();
+        private void PaperButton_Click(object sender, EventArgs e)
+        {           
             Сounting(2);
         }
 
-        private void BScissors_Click(object sender, EventArgs e)
+        private void ScissorsButton_Click(object sender, EventArgs e)
         {
-            ClearAll();
             Сounting(3);
         }
 
@@ -60,34 +51,24 @@ namespace RockPaperScissors
             {
                 if (enemyMove == winMoves[playerMove])
                 {
-                    PrintResults(playerMove, enemyMove, "You WIN!!!");
+                    PrintResults(playerMove, enemyMove, USERWIN);
                 }
                 else
                 {
-                    PrintResults(playerMove, enemyMove, "Enemy win");
+                    PrintResults(playerMove, enemyMove, PROGRAMWIN);
                 }
             }
             else
             {
-                PrintResults(playerMove, enemyMove, "Nobody win");
+                PrintResults(playerMove, enemyMove, NOBODYWIN);
             }
         }
 
         private void PrintResults(int playerMove, int enemyMove, string result)
         {
-            lbYourMove.Text = "Your move: " + designations[playerMove];
-            lbEnemyMove.Text = "Enemy move: " + designations[enemyMove];
-            lbResult.Text = result;
-        }
-
-        private void ClearAll()
-        {
-
-        }
-
-        private void lbYourMove_Click(object sender, EventArgs e)
-        {
-
+            UserMoveLabel.Text = "Your move: " + designations[playerMove];
+            programMoveLabel.Text = "Enemy move: " + designations[enemyMove];
+            resultLabel.Text = result;
         }
     }
 }
